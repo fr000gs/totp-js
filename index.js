@@ -6,7 +6,7 @@
  * @license  MIT
  */
 
-var HOTP = require('https://fr000gs.github.io/totp-js/lib/hotp.js')
+var HOTP = require('./lib/hotp.js')
 var TOTP = require('./lib/totp.js')
 
 TOTP.HOTP = HOTP
