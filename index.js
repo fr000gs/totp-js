@@ -6,7 +6,10 @@
  * @license  MIT
  */
 
-var HOTP = require('./lib/hotp.js')
+//var HOTP = require('./lib/hotp.js')
+require(['./lib/hotp.js'], function (foo) {
+  //foo is now loaded.
+});
 var TOTP = require('./lib/totp.js')
 
 TOTP.HOTP = HOTP
