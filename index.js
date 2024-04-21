@@ -6,8 +6,8 @@
  * @license  MIT
  */
 
-var HOTP = require('./lib/hotp')
-var TOTP = require('./lib/totp')
+var HOTP = require('./lib/hotp.js')
+var TOTP = require('./lib/totp.js')
 
 TOTP.HOTP = HOTP
 
