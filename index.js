@@ -41,7 +41,7 @@ function makepss() {
   var secre = document.getElementById("input_secret").value;
   if (secre.length % 8 === 0 &&
       b32_regex.exec(secre)) {
-      const totp = new TOTP(secre);
+      var totp = new TOTP(secre);
   }
   else {
       alert("Secret invalid");
