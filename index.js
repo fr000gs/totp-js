@@ -7,12 +7,13 @@
  */
 
 //var HOTP = require('./lib/hotp.js')
-require(['./lib/hotp.js'], function (foo) {
-  //foo is now loaded.
+define(['require', './lib/hotp.js', './lib/totp.js'], function (require) {
+  var HOTP = require('./lib/hotp.js');
+  var TOTP = require('./lib/totp.js');
 });
-var TOTP = require('./lib/totp.js')
+//var TOTP = require('./lib/totp.js')
 
-TOTP.HOTP = HOTP
+TOTP.HOTP = HOTP;
 
 module.exports = TOTP;
 /*
