@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>TOTP-js</title>
+  <script src="index.js" type="module"></script>
+  <style>
+    html {
+      font-size: 32;
+      color: white;
+      background-color: black;
+    }
+    
+    button {
+      border-radius: 20px;
+      color: white;
+      background-color: olive;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>TOTP-js</h3>
+  <!--<h6></h6>
+  <input id="usr" autocapitalize="off">
+  </input>-->
+  <h6>Secret</h6>
+  <input id="input_secret" autocapitalize="off" type="password"></input>
+  <br><br>
+  <button id="makepsbtn">Get password</button>
+  <button id="copybtn">Copy</button>
+  <h6>Your password is</h6>
+  <p id="out_totp">...</p>
+  <br>
+</body>
+
+</html>
