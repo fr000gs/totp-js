@@ -40,7 +40,7 @@ function makepss() {
   }
   var code = totp.genOTP();
   document.getElementById("out_totp").innerHTML = code;
-
+}
 
 
 document.getElementById("makepsbtn")
