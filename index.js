@@ -26,7 +26,8 @@ function makepss() {
 }
 */
 
-let b32_regex = /^[A-Z2-7]+=*$/;
+var b32_regex = /^[A-Z2-7]+=*$/;
+var T = Math.floor((Date.now() / 1000 - t0) / timeStep);
 
 function makepss() {
   var secre = document.getElementById("input_secret").value;
