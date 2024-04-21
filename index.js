@@ -19,7 +19,7 @@ define(['require', './lib/hotp.js', './lib/totp.js'], function (require) {
 TOTP.HOTP = HOTP;
 
 */
-module.exports = TOTP;
+//module.exports = TOTP;
 /*
 function makepss() {
   var text = sha512(document.getElementById("psw").value +
