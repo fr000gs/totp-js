@@ -5,6 +5,7 @@
  * @author   wuyanxin <https://wuyanxin.com>
  * @license  MIT
  */
+/*
 var HOTP;
 var TOTP;
 //var HOTP = require('./lib/hotp.js')
@@ -15,6 +16,8 @@ define(['require', './lib/hotp.js', './lib/totp.js'], function (require) {
 //var TOTP = require('./lib/totp.js')
 
 TOTP.HOTP = HOTP;
+*/
+
 
 module.exports = TOTP;
 /*
