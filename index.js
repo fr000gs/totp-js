@@ -38,7 +38,8 @@ function makepss() {
   else {
       alert("Secret invalid");
   }
-
+  var code = totp.genOTP();
+  document.getElementById("out_totp").innerHTML = code;
 
 
 
