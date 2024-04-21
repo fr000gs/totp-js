@@ -22,6 +22,42 @@
 
 <body>
   <h3>TOTP-js</h3>
+  <script>
+
+!function main() {
+      var $secret = document.getElementById('secret');
+      var $totp = document.getElementById('totp');
+      var $ttl = document.getElementById('ttl');
+
+      var totp = new TOTP(key);
+      
+      $secret.innerHTML = key;
+
+      function refreshCode() {
+        $totp.innerHTML = totp.genOTP();
+      }
+
+      function startInterval() {
+        setInterval(function () {
+          var ttl = Math.floor(Date.now() / 1000 % 30);
+          $ttl.innerHTML = 30 - ttl;
+          if (ttl === 0) {
+            refreshCode();
+          }
+        }, 1000);
+      }
+
+      function sync2NextSecond() {
+        var ms2NextSecond = 1000 - (Date.now() % 1000);
+        setTimeout(startInterval, ms2NextSecond);
+      }
+
+      sync2NextSecond();
+      refreshCode();
+
+    }();
+  
+  </script>
   <!--<h6></h6>
   <input id="usr" autocapitalize="off">
   </input>-->
