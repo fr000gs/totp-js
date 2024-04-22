@@ -6,6 +6,8 @@
  * @license  MIT
  */
 
+import "./dist/totp.min.js";
+
 var $secret = document.getElementById('input_secret');
 var $totp = document.getElementById('out_totp');
 var $ttl = document.getElementById('ttl');
@@ -26,22 +28,47 @@ function makepss() {
   $totp.innerHTML = code;
 }
 
+/*
 function startInterval() {
   setInterval(function () {
     var ttl = Math.floor(Date.now() / 1000 % 30);
     $ttl.innerHTML = 30 - ttl;
     if (ttl === 0) {
-      refreshCode();
+      makepss();
     }
+  sync2NextSecond();
   }, 1000);
+  
 }
+
+
 
 function sync2NextSecond() {
   var ms2NextSecond = 1000 - (Date.now() % 1000);
-  setTimeout(startInterval, ms2NextSecond);
+  setTimeout(makettl, 3); // ms2NextSecond);
 }
 
 sync2NextSecond();
+*/
+
+
+
+function makettl() {
+    var ttl = Math.floor(Date.now() / 1000 % 30);
+    $ttl.innerHTML = 30 - ttl;
+    if (ttl === 0) {
+      makepss();
+    }
+}
+
+
+var x = window.setInterval(makettl, 1000);
+
+console.log(x);
+console.log(makettl);
+
+var a = window.setInterval(function() 
+	{alert("a");}, 1000);
 
 document.getElementById("makepsbtn")
   .addEventListener("click", makepss, false);
