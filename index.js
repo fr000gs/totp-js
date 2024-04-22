@@ -26,6 +26,7 @@ function makepss() {
   }
   var code = totp.genOTP();
   $totp.innerHTML = code;
+  window.setInterval(makettl, 1000);
 }
 
 /*
@@ -62,7 +63,7 @@ function makettl() {
 }
 
 
-var x = window.setInterval(makettl, 1000);
+var x = 
 /*
 console.log(x);
 console.log(makettl);
