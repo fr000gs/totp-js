@@ -63,12 +63,13 @@ function makettl() {
 
 
 var x = window.setInterval(makettl, 1000);
-
+/*
 console.log(x);
 console.log(makettl);
 
 var a = window.setInterval(function() 
 	{alert("a");}, 1000);
+*/
 
 document.getElementById("makepsbtn")
   .addEventListener("click", makepss, false);
