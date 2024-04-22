@@ -15,8 +15,7 @@ var $ttl = document.getElementById('ttl');
 var b32_regex = /^[A-Z2-7]+=*$/;
 //var T = Math.floor((Date.now() / 1000 - 30) / timeStep);
 
-function makepss() {
-  var secre = $secret.value;
+function btmakepss() {
   if (secre.length % 8 === 0 &&
       b32_regex.exec(secre)) {
       var totp = new TOTP(secre);
@@ -24,9 +23,14 @@ function makepss() {
   else {
       alert("Secret invalid");
   }
+  window.setInterval(makettl, 1000);
+  makepss();
+}
+
+function makepss() {
+  var secre = $secret.value;
   var code = totp.genOTP();
   $totp.innerHTML = code;
-  window.setInterval(makettl, 1000);
 }
 
 /*
@@ -73,7 +77,7 @@ var a = window.setInterval(function()
 */
 
 document.getElementById("makepsbtn")
-  .addEventListener("click", makepss, false);
+  .addEventListener("click", btmakepss, false);
 
 function copyPassword() {
   var copyText = $totp.innerHTML;
