@@ -11,7 +11,7 @@ var $totp = document.getElementById('out_totp');
 var $ttl = document.getElementById('ttl');
 
 var b32_regex = /^[A-Z2-7]+=*$/;
-var T = Math.floor((Date.now() / 1000 - 30) / timeStep);
+//var T = Math.floor((Date.now() / 1000 - 30) / timeStep);
 
 function makepss() {
   var secre = $secret.value;
