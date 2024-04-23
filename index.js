@@ -1,8 +1,8 @@
 /*!
  * Two-factor authentication implementation in pure javascript.
- * One-time password generator (HOTP/TOTP) with support for Google Authenticator.
+ * One-time password generator (TOTP).
  *
- * @author   wuyanxin <https://wuyanxin.com>
+ * @author   fr000gs <https://wuyanxin.com>
  * @license  MIT
  */
 
@@ -39,8 +39,6 @@ function makettl() {
       makepss();
     }
 }
-
-window.setInterval(makettl, 1000);
 
 document.getElementById("makepsbtn")
   .addEventListener("click", btmakepss, false);
