@@ -43,7 +43,7 @@ function makettl() {
 window.setInterval(makettl, 1000);
 
 document.getElementById("makepsbtn")
-  .addEventListener("click", makepss, false);
+  .addEventListener("click", btmakepss, false);
 
 function copyPassword() {
   var copyText = $totp.innerHTML;
