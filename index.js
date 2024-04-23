@@ -18,12 +18,12 @@ function btmakepss() {
   var secre = $secret.value;
   if (secre.length % 8 === 0 &&
       b32_regex.exec(secre)) {
+      window.setInterval(makettl, 1000);
+      makepss();
   }
   else {
       alert("Secret invalid");
   }
-  window.setInterval(makettl, 1000);
-  makepss();
 }
 
 function makepss() {
