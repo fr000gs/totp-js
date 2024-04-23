@@ -15,6 +15,7 @@ var $ttl = document.getElementById('ttl');
 var b32_regex = /^[A-Z2-7]+=*$/;
 
 function btmakepss() {
+  var secre = $secret.value;
   if (secre.length % 8 === 0 &&
       b32_regex.exec(secre)) {
   }
